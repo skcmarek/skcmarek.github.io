@@ -1,0 +1,7 @@
+name: Marek Skriecka
+markdown: kramdown
+collections:  
+  photos:
+     output: true    
+  projects:  
+    output: true

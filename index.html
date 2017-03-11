@@ -1,1 +1,56 @@
-Hello World
+---
+layout: default
+menu_weight: 1
+title: Domov
+---
+<div>
+	<h2>Vitajte na mojej osobnej stránke k predmetu Webové publikovanie</h2>
+	<p>Na tejto stránke nájdete projekty, na ktorých som pracoval alebo pracujem, fotky, pretože medzi moje záľuby patrí fotenie a tiež blog, ktorý som začal písať pri vzniku tohto webu.</p>
+	<div>
+		<div id="projectPreview" class="previewSection">
+			<h2>Projekty</h2>
+			{% assign sorted_projects_cat = (site.projects | group_by: 'category') %}
+			{% for category in sorted_projects_cat %}
+				{% assign sorted_projects = (category.items | sort: 'date_till'| reverse) %}
+				{% for project in sorted_projects limit:1 %}
+					<div class="projectListItem">
+						<h4>{{project.title}}</h4>
+						<p>({{project.date_from|date_to_string}} - {{project.date_till|date_to_string}})</p>
+					</div>
+				{% endfor %}
+			{% endfor %}
+		</div>
+		{% include showMoreButton.html link='/projects/'%}	  
+	</div>
+	<hr>
+	<div>
+		<div id="photosPreview" class="previewSection">
+			<h2>Galéria</h2>
+		    <div class="photoPreview">
+		    	<img src="images/photos/paris.jpg"/>
+		    	<b>{{image.tittle}}</b>
+		    </div>
+		</div>
+		{% include showMoreButton.html link='/gallery/'%}	  
+	</div>
+	<hr>
+	<div>
+		<div id="blogPreview" class="previewSection">
+			<h2>Blog</h2>
+			<ul >
+			{% for post in site.posts %}
+				<li><b><a style="color:black;" href="{{ post.url}}" title="{{ post.title }}">{{post.title}}</a></b> (<span style="color:grey;">{{ post.date | date_to_string }}</span>)</li>
+			{% endfor %}
+			</ul>
+		</div>
+		{% include showMoreButton.html link='/blog/'%}	  
+	</div>
+	<hr>
+	<div>
+		  <div id="twitterPreview"	 class="previewSection">
+			  <h2>Twitter</h2>
+			  Demonštrácia pluginu do Jekyll-u
+			  {% twitter https://twitter.com/MSkrieckam maxwidth=500 limit=5 %}
+		  </div>
+	</div>
+</div>

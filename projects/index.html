@@ -1,0 +1,24 @@
+---
+layout: default
+menu_weight: 2
+title: Projekty	
+---
+<h1>{{ page.title }}</h1>
+<p>Na tejto stránke sa nachádzajú moje projekty, na ktorých som pracoval. Projekty sú rozdelené do troch kategórií - <i>pracovné, neziskové organizácie a školské.</i></p>	
+
+<div id="projects">
+	{% assign sorted_projects_cat = (site.projects | group_by: 'category') %}
+	{% for category in sorted_projects_cat %}
+	<p>{% include categoryEvaluation.html 	category=category.name %}</p>	 
+		<h1>{{category_sk}}</h1>
+		{% assign sorted_projects = (category.items | sort: 'date_till'| reverse) %}
+		{% for project in sorted_projects %}
+			<div class="project">
+				<a href="{{project.url}}" title="{{ project.title }}"><h3>{{project.title}}</h3></a>
+				<p>Dátum : {{project.date_from | date_to_string}} - {{project.date_till |  date_to_string}}</p>
+				<p>Technologies: <b>{{project.technologies}}</b></p>
+				<hr>
+			</div>
+		{% endfor %}
+	{% endfor %}
+</div>

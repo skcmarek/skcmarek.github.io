@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1>{{page.tittle}}</h1>
+<p>{% include BackToLink.html 	backTo='GALÉRIA' backToLink='/gallery' %}</p>	 
+<img class="photo" src="{{page.src_path}}">
+<div class="photoDescr">
+	<h3>{{page.tookAt | date_to_string}}</h3>
+	<p>Place: <b>{{page.place}}</b></p>
+</div>
+
+<b>Popis: </b> {{content}}

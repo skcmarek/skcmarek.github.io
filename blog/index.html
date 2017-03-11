@@ -1,0 +1,15 @@
+---
+title: Blog
+menu_weight: 4
+layout: default
+---
+<h1>{{page.title }}</h1>
+<p>Na tejto stránke sa nachádza blog, ktorý som začal písať v roku 2017 pri vzniku tejto stránky.</p>	
+
+	<ul >
+	{% for post in site.posts %}
+		<li><b><a style="color:black;" href="{{ post.url}}" title="{{ post.title }}">{{post.title}}</a></b> (<span style="color:grey;">{{ post.date | date_to_string }}</span>)</li>
+	{% endfor %}
+	</ul>
+
+</ul>

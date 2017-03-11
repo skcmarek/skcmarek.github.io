@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<p>{% include BackToLink.html 	backTo='PROJEKTY' backToLink='/projects' %}</p>	 
+<p>Dátum : <b>{{page.date_from | date_to_string}} - {{page.date_till | date_to_string}}</b></p>
+<p>{% include categoryEvaluation.html 	category=page.category %}</p>	 
+<p>Kategória: <b>{{category_sk}}</b></p>
+<p>Technológie: <b>{{page.technologies}}</b></p>
+{{content}}
+<h3>Ukážka projektov: </h3>
+ {% for image in page.images %}
+<div class="photoProject">
+  <a target="_blank" href="{{ image.path }}">
+	<img src="{{ image.path }}"/>
+  </a>	
+	<p>{{image.desc}}</p>
+{% endfor %}
+</div>

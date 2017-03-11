@@ -1,0 +1,194 @@
+body {
+    margin: 30px auto;
+    width: 80%;
+    font-family: 'Georgia', 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+.sidebar{
+    vertical-align: top;    
+    display: inline-block;
+    min-width: 15%;
+    position: fixed;
+}
+
+.activePage, .sidebar nav ul li a:hover{
+    background-color: #dbdcdd;
+    border-radius: 15px;
+}
+
+
+.sidebar nav{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.sidebar nav ul{
+    text-align: center;
+}
+
+.sidebar nav ul li{
+    text-align: center;
+}
+
+.sidebar nav ul li a{
+    color: black;
+    display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+.container{
+  display: inline-block;
+  min-width: 70%;
+  max-width: 70%;
+  margin-left: 25%;
+  min-height: 500px;
+}
+
+#profilePhoto{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+
+}
+
+#profilePhoto img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #f4fbfc;
+}
+
+#name{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.photoInfo {
+    padding: 15px;
+    text-align: center;
+}
+
+.photoProject p{
+    text-align: center;
+}
+
+.photoProject{
+    max-width: 400px;
+}
+
+.photoProject a img{
+    width: 100%;
+}
+
+#projects a{
+    color: black;
+}
+
+.postDesc{
+}
+
+nav ul li{
+    margin-top: 10px;
+}
+.photoPreview{
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#showMore{
+    display: inline-block;
+    min-width: 20%;
+    right: 0;
+}
+
+.projectListItem{
+    text-align: center;
+}
+.photo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.photoDescr{
+    text-align: center;
+}
+
+.previewSection{
+    margin-top: 20px;
+    display: inline-block;
+    min-width: 75%;
+    max-width: 75%;
+}
+
+.photoListItem {
+    display: inline-block;
+    width: 250px;
+    max-height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.photoListItem img{
+    width: 100%;
+    max-height: 150px;
+}
+
+.photoPreview img {
+    width: 100%;
+    max-height: 300px;
+}
+
+nav ul, footer ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-weight: bold;
+
+}
+
+nav ul li, footer ul li {
+    display: block;
+    margin-right: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+
+@media screen and (max-width: 970px){
+
+    .container{
+        margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .sidebar{
+        position: initial;  
+    }
+    .container{
+        margin-left: 0px;
+    }
+
+    .sidebar{
+        margin-left: 0px;
+   }
+}

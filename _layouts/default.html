@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<link rel="stylesheet" type="text/css" href="/css/style.css">
+		</head>
+		<body>
+			<div class="sidebar">
+				<div id="nameAndphoto">
+					<div id="profilePhoto"><img src="/images/profile_photo.jpg"></div>
+					<div id="name">
+					<p>Marek Škriečka</p>
+					<a href="https://twitter.com/MSkrieckam" class="twitter-follow-button" data-show-count="false">Follow @MSkrieckam</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>	
+				<nav class="main-nav">
+				  	<ul>
+				    {% assign nav_list = site.html_pages %}
+				    {% assign nav_list_sorted = nav_list | sort: 'menu_weight' %}
+				    {% for nav_item in nav_list_sorted %}
+				        <li {% if nav_item.url == page.url %} class="activePage" {% endif %}>
+				          <a href="{{nav_item.url}}">
+				           {{nav_item.title}}	
+				          </a>
+				        </li>
+				    {% endfor %}
+				  	</ul>
+				</nav>
+			</div>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div>
+			{% include footer.html %}
+		</body>
+	</html>

@@ -1,0 +1,22 @@
+---
+title: Osobná galéria
+menu_weight: 3
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p>Medzi moje záľuby patrí fotografovanie. Na tejto stránke nájdete výber najlepších fotografií, ktoré som zhotovil.</p>	
+{% assign ordered_photos = (site.photos | sort 'tookAt' | reverse) %}
+{% for photo in ordered_photos %}
+	<div class="photoListItem">
+		<h3 style="text-align: center;">{{photo.tittle}}</h3>
+		<a target="_blank" href="{{photo.src_path}}">
+			<img src="{{photo.src_path}}">
+		</a>
+		<div class="photoInfo">
+			<p><b>Miesto:</b> {{photo.place}}</p>
+			<p><b>Datum:</b> {{photo.tookAt }}</p>
+			<a href="{{photo.url}}">Zobrazit podrobnosti</a>
+		</div>
+	</div>
+{% endfor %}
+</ul>
