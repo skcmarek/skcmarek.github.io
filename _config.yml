@@ -5,3 +5,5 @@ collections:
      output: true    
   projects:  
     output: true
+  tasks:
+    output: true
