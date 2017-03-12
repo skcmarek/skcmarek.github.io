@@ -4,12 +4,27 @@ title: Zadanie 1
 ---
 V tejto podstránke sa nachádzajú informácie o spôsobe vypracovania zadania. 
 
+# Rozdelenie webovej stránky
+Webová stránka je rozdelená na tieto podstránky: 
+* **Domov** - na domovskej stránke sú zobrazené najnovšie príspevky z jednotlivých podstránok
+* **Projekty** - podstránka pre projekty
+* **Osobná galéria** - osobná galéria fotografií
+* **Blog** - podstránka pre blogové príspevky
+* **Webové publikovanie** - podstránka pre informácie o vypracovaných zadaniach
+
+# Rozloženia
+Vo webovej stránke sú použité rôzne rozloženia pre zobrazenie:
+* **detailu fotografie** 
+* **detailu projektu** 
+* **príspevku** 
+* **zadania** 
+* **základnej štruktúry stránky** 
 
 # Kolekcie
 V zadaní sú použité tieto kolekcie: 
 * **photos** - na vytvorenie galérie obrázkov
 * **projects** - na správu projektov, na ktorých som pracoval
-* **blog** - na publikovanie príspevkov do blohu
+* **blog** - na publikovanie príspevkov do blogu
 
 # Premenné
 
@@ -32,7 +47,7 @@ V rámci zadania boli použité tieto premenné:
 * pri **podstránkach** je použitá premenná _menu_weight_, na základe ktorej sú zoradené podstránky v menu
 * pri **include _backToLink.html_**  je použitá premenná *link* a *názov link-u*, ktorý má odkazaovať na zoznam položiek z konkrétnej položky
 * pri **include _categoryEvaluation.html_** je použitá premenná *category* a *category_sk*
-* pri **include _showMoreButton.html_** je použitá premenná *link* na určenie odkazu, ktorú strána sa má zobraziť
+* pri **include _showMoreButton.html_** je použitá premenná *link* na určenie odkazu, ktorú stránkea sa má zobraziť
 
 # Filtre a tagy
 
@@ -42,7 +57,7 @@ V zadaní používam tieto filtre a tagy:
 * *group_by* - na zoskupenie projektov podľa kategórie
 * *limit* - na limitovanie počtu zobrazených položiek pri iterovaní (napr. na zobrazenie len 3 projektov na úvodnej stránke)
 * *date_to_string* - na konvertovanie dátumu na dátum s slovným vyjadrením mesiaca 
-* *include* - na zahrnutie opakovaných sa častí webovej stránky - napr. _backToLink_ link na vrátenie sa na zoznam položiek, _categoryEvaluation.html_je akoby funckia, ktorá prekladá kategórie z premenných projetov na slovenské názvy (napr. ngo preloží ako neziskové organizácie)
+* *include* - na zahrnutie opakovaných sa častí webovej stránky - napr. _backToLink_ link na vrátenie sa na zoznam položiek, _categoryEvaluation.html_je akoby funckia, ktorá prekladá kategórie z premenných projektov na slovenské názvy (napr. ngo preloží ako neziskové organizácie)
 * *for item in items* -  pri vytváraní menu, pri vytváraní zoznamu príspevkov v blogu, náhlade galérie a projektov, pri náhladoch projektu
 * *assign* - na priradenie poľa do premennej, aby sme ju mohli na základe nejakej hodnoty zoradiť alebo zoskupiť a potom cez to pole prechádzať
 * *if* - na zistenie, či je stránka aktuálne otvorená, aby sme ju v menu mohli odlíšiť od ostatných
